@@ -17,7 +17,7 @@ const Section = styled.section`
 `;
 
 const Title = styled.h2`
-  padding-top: 80px;
+  padding-top: 60px;
   font-size: 35px;
   letter-spacing: 3px;
 `;
