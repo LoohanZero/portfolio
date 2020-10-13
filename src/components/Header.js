@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import backgroundImage from "../imgs/_MG_2641.png";
+import backgroundImage from "../imgs/backgroundphoto.png";
 import react from "../imgs/logos/react.png";
 import js from "../imgs/logos/js.png";
 import html from "../imgs/logos/html.png";
