@@ -1,25 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styled, { createGlobalStyle } from "styled-components";
+import { Nav, Header, About, Projects, Footer } from "./components";
+import useSticky from "./hooks/useSticky.js";
+
+const GlobalStyle = createGlobalStyle`
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #212121;
+  display: flex;
+  font-family: 'Lato', Verdana, Geneva, Tahoma, sans-serif;
+  color: #eeeeee;
+
+}
+`;
+
+const StyledApp = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+`;
+
+const Main = styled.main``;
 
 function App() {
+  const { backgroundColor, header, about } = useSticky();
+  console.log(backgroundColor);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StyledApp className="App">
+      <GlobalStyle />
+      <Nav background={backgroundColor} />
+      <Header element={header} />
+      <Main>
+        <Projects />
+        <About element={about} />
+        <Footer />
+      </Main>
+    </StyledApp>
   );
 }
 
