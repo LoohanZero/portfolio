@@ -81,6 +81,7 @@ const StyledLink = styled(Link)`
   position: relative;
   text-decoration: none;
   border-bottom: 2px solid transparent;
+  color: inherit;
 `;
 
 const Nav = ({ background }) => {

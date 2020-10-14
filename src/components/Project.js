@@ -12,7 +12,6 @@ const ProjectContainer = styled.div`
   @media (max-width: 1024px) {
     width: 60%;
     height: auto;
-  
   }
 `;
 
@@ -75,6 +74,7 @@ const Link = styled.a`
   display: flex;
   align-items: center;
   text-decoration: none;
+  color: inherit;
 
   &:hover ${StyledGithub} {
     color: #32e0c4;

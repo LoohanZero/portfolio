@@ -25,6 +25,7 @@ const Link = styled.a`
   align-items: center;
   text-decoration: none;
   cursor: pointer;
+  color: inherit; 
 
   &:visited {
     color: #eeeeee;
