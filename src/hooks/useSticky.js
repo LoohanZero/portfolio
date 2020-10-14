@@ -21,7 +21,7 @@ const useSticky = () => {
   };
 
   const handleBlack = (header) => {
-    window.scrollY >= header - 100 &&
+    window.scrollY >= header - 80 &&
       setBackgroundColor(BACKGROUND_COLOR.stickyProjects);
   };
 
