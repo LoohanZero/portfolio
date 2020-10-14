@@ -8,7 +8,7 @@ const ProjectContainer = styled.div`
   min-height: 550px;
   min-width: 500px;
   margin: 40px;
-  background-color: rgb(19, 18, 22);
+  background-color: rgba(0,0,0,0.9);
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 10px 10px 49px -6px rgba(0,0,0,0.75);
