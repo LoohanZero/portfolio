@@ -12,7 +12,6 @@ const useSticky = () => {
   const header = useRef(null);
   const about = useRef(null);
   const projects = useRef(null);
- 
 
   const handleTransparent = () => {
     window.scrollY > header.current.scrollLeft
@@ -21,14 +20,13 @@ const useSticky = () => {
   };
 
   const handleBlack = (header) => {
-    window.scrollY >= header - 80 &&
+    window.scrollY >= header - 100 &&
       setBackgroundColor(BACKGROUND_COLOR.stickyProjects);
+
+  
   };
 
   const handleWhite = (header, projects) => {
-    console.log(window.scrollY);
-    console.log(header + projects);
-
     window.scrollY >= header + projects - 100 &&
       setBackgroundColor(BACKGROUND_COLOR.white);
   };
@@ -45,7 +43,7 @@ const useSticky = () => {
     window.addEventListener("scroll", handleScroll);
   }, [header.handleScroll, about.handleScroll, projects.handleScroll]);
 
-  return { backgroundColor, header, about, projects};
+  return { backgroundColor, header, about, projects };
 };
 
 export default useSticky;

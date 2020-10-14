@@ -14,9 +14,10 @@ const Section = styled.section`
   min-height: 100vh;
   width: 100%;
   height: 100%;
+  margin-top: 30px;
 `;
 const Title = styled.h2`
-  padding: 100px 0 20px 0;
+  margin: 100px 0 20px 0;
 
   font-size: 35px;
   letter-spacing: 3px;
@@ -31,7 +32,7 @@ const ProjectsContainer = styled.div`
 
 const Projects = ({ element }) => {
   return (
-    <Section id="projects" ref={element}>
+    <Section ref={element} id="projects">
       <Title>My Projects</Title>
       <ProjectsContainer>
         <Project
