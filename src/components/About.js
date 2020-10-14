@@ -14,17 +14,29 @@ const Section = styled.section`
   color: #212121;
   box-shadow: inset 0 0 10px #000000;
   padding-bottom: 30px;
+
+  @media (max-width: 1024px) {
+    min-height: 90vh;
+  }
 `;
 
 const Title = styled.h2`
   padding-top: 30px;
   font-size: 35px;
   letter-spacing: 3px;
+
+  @media (max-width: 1024px) {
+    padding: 100px 0 50px 0;
+  }
 `;
 
 const Text = styled.p`
   padding-bottom: 10px;
   line-height: 23px;
+
+  @media (max-width: 1024px) {
+    text-align: center;
+  }
 `;
 
 const AboutMeContainer = styled.div`
@@ -32,15 +44,29 @@ const AboutMeContainer = styled.div`
   justify-content: space-evenly;
   align-items: center;
   width: 80%;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    
+  }
 `;
 
 const Image = styled.img`
   width: 300px;
   border-radius: 10px;
+
+  @media (max-width: 1024px) {
+    width: 400px;
+    margin-bottom: 50px;
+  }
 `;
 
 const DescriptionContainer = styled.div`
   width: 50%;
+
+  @media (max-width: 1024px) {
+    width: 80%;
+  }
 `;
 
 const SkillsContainer = styled.div`
@@ -50,10 +76,16 @@ const SkillsContainer = styled.div`
 const Subtitle = styled.h4`
   font-size: 20px;
   padding-bottom: 15px;
+  @media (max-width: 1024px) {
+    text-align: center;
+  }
 `;
 
 const ListContainer = styled.div`
   display: flex;
+  @media (max-width: 1024px) {
+    justify-content: space-evenly;
+  }
 `;
 
 const List = styled.ul`
@@ -63,6 +95,10 @@ const List = styled.ul`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+
+  @media (max-width: 1024px) {
+    width: auto;
+  }
 `;
 
 const Span = styled.span`

@@ -81,8 +81,6 @@ const StyledLink = styled(Link)`
   position: relative;
   text-decoration: none;
   border-bottom: 2px solid transparent;
-
- 
 `;
 
 const Nav = ({ background }) => {
@@ -90,31 +88,42 @@ const Nav = ({ background }) => {
     <StyledNav background={background}>
       <List>
         <ListItem background={background}>
-          <StyledLink to="home" smooth={true} spy={true} duration={1000} activeClass="active">
+          <StyledLink
+            to="home"
+            smooth={true}
+            spy={true}
+            duration={1000}
+            activeClass="active"
+          >
             <ListItemHoverLeft />
             <ListItemHoverRight />
             Home
           </StyledLink>
         </ListItem>
         <ListItem background={background}>
-          <StyledLink to="projects" smooth={true} spy={true} duration={1000} activeClass="active">
+          <StyledLink
+            to="projects"
+            smooth={true}
+            spy={true}
+            duration={1000}
+            activeClass="active"
+          >
             <ListItemHoverLeft />
             <ListItemHoverRight />
             Projects
           </StyledLink>
         </ListItem>
         <ListItem background={background}>
-          <StyledLink to="about" smooth={true} spy={true} duration={1000} activeClass="active">
+          <StyledLink
+            to="about"
+            smooth={true}
+            spy={true}
+            duration={1000}
+            activeClass="active"
+          >
             <ListItemHoverLeft />
             <ListItemHoverRight />
             About
-          </StyledLink>
-        </ListItem>
-        <ListItem background={background}>
-          <StyledLink to="contact" smooth={true} spy={true} duration={1000} activeClass="active">
-            <ListItemHoverLeft />
-            <ListItemHoverRight />
-            Contact
           </StyledLink>
         </ListItem>
       </List>

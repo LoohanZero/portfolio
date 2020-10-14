@@ -29,9 +29,9 @@ const ProjectsContainer = styled.div`
   flex-wrap: wrap;
 `;
 
-const Projects = () => {
+const Projects = ({ element }) => {
   return (
-    <Section id="projects">
+    <Section id="projects" ref={element}>
       <Title>My Projects</Title>
       <ProjectsContainer>
         <Project
@@ -55,18 +55,6 @@ const Projects = () => {
           office management."
           github="https://github.com/LoohanZero/SIPECarnicerias"
           demo="https://www.sipecarnicerias.com/"
-        />
-        <Project
-          title="The Ada Movie"
-          src={movie}
-          description="App based in The Movie Database. It was built using React.js with hooks, Javascript, Sass and Firebase. The design is responsive and we
-          made the deployment trough the Git terminal to Netlify. It was an
-          amazing challenge requested by ADA ITW, our bootcamp, that me and my
-          classmates built from scratch using Github as our project organizer.
-          The design, develepment and architecture were agreed between all of
-          us."
-          github={"https://github.com/skailish/TP_Final"}
-          demo={"https://theadamovie.netlify.app/"}
         />
         <Project
           title="The Marvel App"

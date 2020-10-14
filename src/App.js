@@ -3,6 +3,7 @@ import styled, { createGlobalStyle } from "styled-components";
 import { Nav, Header, About, Projects, Footer } from "./components";
 import useSticky from "./hooks/useSticky.js";
 
+
 const GlobalStyle = createGlobalStyle`
 *{
   margin: 0;
@@ -26,15 +27,14 @@ const StyledApp = styled.div`
 const Main = styled.main``;
 
 function App() {
-  const { backgroundColor, header, about } = useSticky();
-  console.log(backgroundColor);
+  const { backgroundColor, header, about, projects, app } = useSticky();
   return (
-    <StyledApp className="App">
+    <StyledApp className="App" ref={app}>
       <GlobalStyle />
       <Nav background={backgroundColor} />
       <Header element={header} />
       <Main>
-        <Projects />
+        <Projects element={projects} />
         <About element={about} />
         <Footer />
       </Main>

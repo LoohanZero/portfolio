@@ -8,16 +8,27 @@ const ProjectContainer = styled.div`
   min-height: 550px;
   min-width: 500px;
   margin: 40px;
+
+  @media (max-width: 1024px) {
+    width: 60%;
+    height: auto;
+  
+  }
 `;
 
 const Image = styled.img`
   width: 100%;
+  height: 245px;
 `;
 const DescriptionContainer = styled.div`
   height: 305px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (max-width: 1024px) {
+    height: auto;
+  }
 `;
 const ProjectTitle = styled.h3`
   font-size: 25px;
@@ -31,6 +42,12 @@ const ProjectDescription = styled.p`
   padding: 5px 15px 15px 15px;
   text-align: justify;
   height: 150px;
+
+  @media (max-width: 1024px) {
+    height: auto;
+    padding-bottom: 20px;
+    text-align: center;
+  }
 `;
 
 const LinkContainer = styled.div`
@@ -80,15 +97,13 @@ const Link = styled.a`
   }
 `;
 
-const Project = ({title, src, description, github, demo}) => {
+const Project = ({ title, src, description, github, demo }) => {
   return (
     <ProjectContainer>
       <Image src={src} />
       <DescriptionContainer>
         <ProjectTitle>{title}</ProjectTitle>
-        <ProjectDescription>
-         {description}
-        </ProjectDescription>
+        <ProjectDescription>{description}</ProjectDescription>
         <LinkContainer>
           <Link href={github} target="_blank">
             <StyledGithub />

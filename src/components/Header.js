@@ -12,10 +12,15 @@ const BackgroundImage = styled.div`
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   min-height: 100vh;
   position: absolute;
   background-attachment: fixed;
+
+  @media (max-width: 1024px) {
+    min-height: 90vh;
+    height: 90vh;
+  }
 `;
 const StyledHeader = styled.header`
   display: flex;
@@ -23,8 +28,13 @@ const StyledHeader = styled.header`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   z-index: 10;
+
+  @media (max-width: 1024px) {
+    min-height: 90vh;
+  }
 `;
 
 const TitleContainer = styled.div`
@@ -71,6 +81,7 @@ const Text = styled.p`
 
 const Button = styled.button`
   width: 200px;
+  min-width: 150px;
   height: 50px;
   font-size: 20px;
   background-color: transparent;
@@ -107,6 +118,10 @@ const Button = styled.button`
 const Logo = styled.img`
   height: 45px;
   padding: 0 30px;
+
+  @media (max-width: 1024px) {
+    padding: 0 15px;
+  }
 `;
 
 const Header = ({ element }) => {
