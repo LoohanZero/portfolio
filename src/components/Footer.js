@@ -19,20 +19,41 @@ const List = styled.ul`
   list-style: none;
   display: flex;
 `;
-const ListItem = styled.li`
-  padding: 30px;
-  cursor: pointer;
-`;
 
 const Link = styled.a`
   display: flex;
   align-items: center;
   text-decoration: none;
+  cursor: pointer;
 
   &:visited {
     color: #eeeeee;
   }
 `;
+
+const Text = styled.p`
+  padding: 30px;
+  transition: 0.3s ease-in;
+ 
+`;
+
+const ListItem = styled.li`
+  padding: 30px;
+  transition: 0.3s ease-in;
+  display: flex; 
+  align-items: center; 
+
+  &:hover ${Link} {
+    color: #32e0c4;
+    transition: 0.3s ease-in;
+  }
+
+  &:hover ${Text} {
+    color: #32e0c4;
+    transition: 0.3s ease-in;
+  }
+`;
+
 const StyledLinkedin = styled(LinkedinIn)`
   height: 25px;
   padding: 0 15px;
@@ -47,9 +68,9 @@ const StyledMail = styled(Mail)`
   padding: 0 15px;
 `;
 
-const Footer = () => {
+const Footer = ({ element }) => {
   return (
-    <StyledFooter id="contact">
+    <StyledFooter id="contact" ref={element}>
       <List>
         <ListItem>
           <Link
@@ -65,9 +86,9 @@ const Footer = () => {
           </Link>
         </ListItem>
         <ListItem>
-          <Link>
+          <Text>
             <StyledMail /> mlulasan@gmail.com
-          </Link>
+          </Text>
         </ListItem>
       </List>
     </StyledFooter>

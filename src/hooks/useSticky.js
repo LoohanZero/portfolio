@@ -12,7 +12,7 @@ const useSticky = () => {
   const header = useRef(null);
   const about = useRef(null);
   const projects = useRef(null);
-  const app = useRef(null);
+ 
 
   const handleTransparent = () => {
     window.scrollY > header.current.scrollLeft
@@ -45,7 +45,7 @@ const useSticky = () => {
     window.addEventListener("scroll", handleScroll);
   }, [header.handleScroll, about.handleScroll, projects.handleScroll]);
 
-  return { backgroundColor, header, about, projects, app };
+  return { backgroundColor, header, about, projects};
 };
 
 export default useSticky;

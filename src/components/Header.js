@@ -124,7 +124,14 @@ const Logo = styled.img`
   }
 `;
 
-const Header = ({ element }) => {
+const Header = ({ element, scroll }) => {
+  const handleContactClick = (scroll) => {
+    window.scroll({
+      top: document.body.scrollHeight,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <>
       <BackgroundImage />
@@ -138,7 +145,7 @@ const Header = ({ element }) => {
           <Subtitle>Frontend & React.Js Developer</Subtitle>
         </TitleContainer>
         <ContactContainer>
-          <Button>
+          <Button onClick={() => handleContactClick(scroll)}>
             <Text>Contact Me</Text>
           </Button>
           <Logo src={react} />

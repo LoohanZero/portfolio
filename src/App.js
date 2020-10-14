@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import { Nav, Header, About, Projects, Footer } from "./components";
 import useSticky from "./hooks/useSticky.js";
-
 
 const GlobalStyle = createGlobalStyle`
 *{
@@ -27,16 +26,17 @@ const StyledApp = styled.div`
 const Main = styled.main``;
 
 function App() {
-  const { backgroundColor, header, about, projects, app } = useSticky();
+  const footer = useRef(null);
+  const { backgroundColor, header, about, projects } = useSticky();
   return (
-    <StyledApp className="App" ref={app}>
+    <StyledApp className="App">
       <GlobalStyle />
       <Nav background={backgroundColor} />
-      <Header element={header} />
+      <Header element={header} scroll={footer} />
       <Main>
         <Projects element={projects} />
         <About element={about} />
-        <Footer />
+        <Footer element={footer} />
       </Main>
     </StyledApp>
   );
