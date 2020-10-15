@@ -1,9 +1,10 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import backgroundImage from "../imgs/backgroundphoto.png";
 import react from "../imgs/logos/react.png";
 import js from "../imgs/logos/js.png";
 import html from "../imgs/logos/html.png";
+import { fadeInUp } from "react-animations";
 
 const BackgroundImage = styled.div`
   background-image: url(${backgroundImage});
@@ -24,9 +25,6 @@ const BackgroundImage = styled.div`
 `;
 const StyledHeader = styled.header`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   min-height: 100vh;
   height: 100%;
@@ -124,6 +122,17 @@ const Logo = styled.img`
   }
 `;
 
+const fadeInUpAnimation = keyframes`${fadeInUp}`;
+
+const FadeInUpDiv = styled.div`
+  animation: 0.6s ${fadeInUpAnimation};
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
 const Header = ({ element, scroll }) => {
   const handleContactClick = (scroll) => {
     window.scroll({
@@ -136,22 +145,24 @@ const Header = ({ element, scroll }) => {
     <>
       <BackgroundImage />
       <StyledHeader ref={element} id="home">
-        <TitleContainer>
-          <Title>Hi there, </Title>
-          <Title>
-            I'm
-            <Span>Luján Sanchez</Span>
-          </Title>
-          <Subtitle>Frontend & React.Js Developer</Subtitle>
-        </TitleContainer>
-        <ContactContainer>
-          <Button onClick={() => handleContactClick(scroll)}>
-            <Text>Contact Me</Text>
-          </Button>
-          <Logo src={react} />
-          <Logo src={js} />
-          <Logo src={html} />
-        </ContactContainer>
+        <FadeInUpDiv>
+          <TitleContainer>
+            <Title>Hi there, </Title>
+            <Title>
+              I'm
+              <Span>Luján Sanchez</Span>
+            </Title>
+            <Subtitle>Frontend & React.Js Developer</Subtitle>
+          </TitleContainer>
+          <ContactContainer>
+            <Button onClick={() => handleContactClick(scroll)}>
+              <Text>Contact Me</Text>
+            </Button>
+            <Logo src={react} />
+            <Logo src={js} />
+            <Logo src={html} />
+          </ContactContainer>
+        </FadeInUpDiv>
       </StyledHeader>
     </>
   );

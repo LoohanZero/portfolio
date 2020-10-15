@@ -15,6 +15,7 @@ const Section = styled.section`
   width: 100%;
   height: 100%;
   margin-top: 30px;
+  margin-bottom: 20px;
 `;
 const Title = styled.h2`
   margin: 100px 0 20px 0;
@@ -30,9 +31,9 @@ const ProjectsContainer = styled.div`
   flex-wrap: wrap;
 `;
 
-const Projects = ({ element }) => {
+const Projects = () => {
   return (
-    <Section ref={element} id="projects">
+    <Section id="projects">
       <Title>My Projects</Title>
       <ProjectsContainer>
         <Project

@@ -107,9 +107,9 @@ const Span = styled.span`
 `;
 const ListItem = styled.li``;
 
-const About = ({ element }) => {
+const About = () => {
   return (
-    <Section ref={element} id="about">
+    <Section id="about">
       <Title>About Me</Title>
       <AboutMeContainer>
         <Image src={photo} alt="It's a picture of me" />

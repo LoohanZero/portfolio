@@ -27,15 +27,15 @@ const Main = styled.main``;
 
 function App() {
   const footer = useRef(null);
-  const { backgroundColor, header, about, projects } = useSticky();
+  const { backgroundColor, header } = useSticky();
   return (
     <StyledApp className="App">
       <GlobalStyle />
       <Nav background={backgroundColor} />
       <Header element={header} scroll={footer} />
       <Main>
-        <Projects element={projects} />
-        <About element={about} />
+        <Projects />
+        <About />
         <Footer element={footer} />
       </Main>
     </StyledApp>
