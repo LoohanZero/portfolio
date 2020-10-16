@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import backgroundImage from "../imgs/backgroundphoto.png";
 import react from "../imgs/logos/react.png";
 import js from "../imgs/logos/js.png";
 import html from "../imgs/logos/html.png";
-import { fadeInUp } from "react-animations";
+import Fade from "react-reveal/Fade";
+import {
+  Link,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from "react-scroll";
 
 const BackgroundImage = styled.div`
   background-image: url(${backgroundImage});
@@ -25,6 +33,9 @@ const BackgroundImage = styled.div`
 `;
 const StyledHeader = styled.header`
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   min-height: 100vh;
   height: 100%;
@@ -122,11 +133,9 @@ const Logo = styled.img`
   }
 `;
 
-const fadeInUpAnimation = keyframes`${fadeInUp}`;
-
-const FadeInUpDiv = styled.div`
-  animation: 0.6s ${fadeInUpAnimation};
-  width: 100%;
+const InfoContainer = styled.div`
+  
+  width: 1200px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -134,6 +143,26 @@ const FadeInUpDiv = styled.div`
 `;
 
 const Header = ({ element, scroll }) => {
+  useEffect(() => {
+    const componentDidMount = () => {
+      Events.scrollEvent.register("begin", function (to, element) {
+        console.log("begin", arguments);
+      });
+
+      Events.scrollEvent.register("end", function (to, element) {
+        console.log("end", arguments);
+      });
+
+      scrollSpy.update();
+    };
+    return () => {
+      const componentWillUnmount = () => {
+        Events.scrollEvent.remove("begin");
+        Events.scrollEvent.remove("end");
+      };
+    };
+  }, []);
+
   const handleContactClick = (scroll) => {
     window.scroll({
       top: document.body.scrollHeight,
@@ -141,28 +170,31 @@ const Header = ({ element, scroll }) => {
       behavior: "smooth",
     });
   };
+
   return (
     <>
       <BackgroundImage />
-      <StyledHeader ref={element} id="home">
-        <FadeInUpDiv>
-          <TitleContainer>
-            <Title>Hi there, </Title>
-            <Title>
-              I'm
-              <Span>Luján Sanchez</Span>
-            </Title>
-            <Subtitle>Frontend & React.Js Developer</Subtitle>
-          </TitleContainer>
-          <ContactContainer>
-            <Button onClick={() => handleContactClick(scroll)}>
-              <Text>Contact Me</Text>
-            </Button>
-            <Logo src={react} />
-            <Logo src={js} />
-            <Logo src={html} />
-          </ContactContainer>
-        </FadeInUpDiv>
+      <StyledHeader ref={element} name="home" scroll={scroll}>
+        <Fade bottom>
+          <InfoContainer>
+            <TitleContainer>
+              <Title>Hi there, </Title>
+              <Title>
+                I'm
+                <Span>Luján Sanchez</Span>
+              </Title>
+              <Subtitle>Frontend & React.Js Developer</Subtitle>
+            </TitleContainer>
+            <ContactContainer>
+              <Button onClick={() => handleContactClick(scroll)}>
+                <Text>Contact Me</Text>
+              </Button>
+              <Logo src={react} />
+              <Logo src={js} />
+              <Logo src={html} />
+            </ContactContainer>
+          </InfoContainer>
+        </Fade>
       </StyledHeader>
     </>
   );

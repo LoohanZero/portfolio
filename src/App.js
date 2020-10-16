@@ -3,6 +3,7 @@ import styled, { createGlobalStyle } from "styled-components";
 import { Nav, Header, About, Projects, Footer } from "./components";
 import useSticky from "./hooks/useSticky.js";
 
+
 const GlobalStyle = createGlobalStyle`
 *{
   margin: 0;
@@ -28,6 +29,8 @@ const Main = styled.main``;
 function App() {
   const footer = useRef(null);
   const { backgroundColor, header } = useSticky();
+
+
   return (
     <StyledApp className="App">
       <GlobalStyle />

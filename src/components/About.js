@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import photo from "../imgs/photo.jpg";
+import Slide from "react-reveal/Slide";
 
 const Section = styled.section`
   display: flex;
@@ -47,8 +48,11 @@ const AboutMeContainer = styled.div`
 
   @media (max-width: 1024px) {
     flex-direction: column;
-    
   }
+`;
+
+const ImageContainer = styled.div`
+  
 `;
 
 const Image = styled.img`
@@ -61,8 +65,12 @@ const Image = styled.img`
   }
 `;
 
-const DescriptionContainer = styled.div`
+const AnimationDescriptionContainer = styled.div`
   width: 50%;
+`;
+
+const DescriptionContainer = styled.div`
+  width: 100%;
 
   @media (max-width: 1024px) {
     width: 80%;
@@ -109,64 +117,75 @@ const ListItem = styled.li``;
 
 const About = () => {
   return (
-    <Section id="about">
+    <Section name="about">
       <Title>About Me</Title>
+
       <AboutMeContainer>
-        <Image src={photo} alt="It's a picture of me" />
-        <DescriptionContainer>
-          <Text>
-            I'm a 33 year old frontend developer. I'm currently located in
-            Menorca, Spain but I'm willing to relocate wherever my job requires.
-            I'm curious by nature and I enjoy finding out the whys and hows of
-            everything. I like studying and constantly learning new things, it
-            keeps my mind awake. I love challenges and working with people,
-            there's nothing like the satisfaction of a finished group project.
-          </Text>
-          <Text>
-            I would like the opportunity of joining a team of diverse developers
-            so I can improve my front and backend skills. I'm a restless and
-            passionate worker and I believe I can bring a lot to the table.
-          </Text>
-          <SkillsContainer>
-            <Subtitle>My Skills</Subtitle>
-            <ListContainer>
-              <List>
-                <ListItem>
-                  <Span>○</Span>React.JS with Hooks
-                </ListItem>
-                <ListItem>
-                  <Span>○</Span>Javascript ES6
-                </ListItem>
-                <ListItem>
-                  <Span>○</Span>Sass
-                </ListItem>
-                <ListItem>
-                  <Span>○</Span>HTML5 & CSS3
-                </ListItem>
-                <ListItem>
-                  <Span>○</Span>Bootstrap
-                </ListItem>
-              </List>
-              <List>
-                <ListItem>
-                  <Span>○</Span>Git
-                </ListItem>
-                <ListItem>
-                  <Span>○</Span>Firebase
-                </ListItem>
-                <ListItem>
-                  <Span>○</Span>Responsive Design
-                </ListItem>
-                <ListItem>
-                  <Span>○</Span>Node.JS
-                </ListItem>
-                <ListItem>
-                  <Span>○</Span>MongoDB
-                </ListItem>
-              </List>
-            </ListContainer>
-          </SkillsContainer>
-        </DescriptionContainer>
+        <ImageContainer>
+          <Slide left>
+            <Image src={photo} alt="It's a picture of me" />
+          </Slide>
+        </ImageContainer>
+        <AnimationDescriptionContainer>
+          <Slide right>
+            <DescriptionContainer>
+              <Text>
+                I'm a 33 year old frontend developer. I'm currently located in
+                Menorca, Spain but I'm willing to relocate wherever my job
+                requires. I'm curious by nature and I enjoy finding out the whys
+                and hows of everything. I like studying and constantly learning
+                new things, it keeps my mind awake. I love challenges and
+                working with people, there's nothing like the satisfaction of a
+                finished group project.
+              </Text>
+              <Text>
+                I would like the opportunity of joining a team of diverse
+                developers so I can improve my front and backend skills. I'm a
+                restless and passionate worker and I believe I can bring a lot
+                to the table.
+              </Text>
+              <SkillsContainer>
+                <Subtitle>My Skills</Subtitle>
+                <ListContainer>
+                  <List>
+                    <ListItem>
+                      <Span>○</Span>React.JS with Hooks
+                    </ListItem>
+                    <ListItem>
+                      <Span>○</Span>Javascript ES6
+                    </ListItem>
+                    <ListItem>
+                      <Span>○</Span>Sass
+                    </ListItem>
+                    <ListItem>
+                      <Span>○</Span>HTML5 & CSS3
+                    </ListItem>
+                    <ListItem>
+                      <Span>○</Span>Bootstrap
+                    </ListItem>
+                  </List>
+                  <List>
+                    <ListItem>
+                      <Span>○</Span>Git
+                    </ListItem>
+                    <ListItem>
+                      <Span>○</Span>Firebase
+                    </ListItem>
+                    <ListItem>
+                      <Span>○</Span>Responsive Design
+                    </ListItem>
+                    <ListItem>
+                      <Span>○</Span>Node.JS
+                    </ListItem>
+                    <ListItem>
+                      <Span>○</Span>MongoDB
+                    </ListItem>
+                  </List>
+                </ListContainer>
+              </SkillsContainer>
+            </DescriptionContainer>
+          </Slide>
+        </AnimationDescriptionContainer>
       </AboutMeContainer>
     </Section>
   );

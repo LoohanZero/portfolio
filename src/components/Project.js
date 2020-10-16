@@ -1,40 +1,20 @@
 import React from "react";
-import styled, { keyframes, css } from "styled-components";
+import styled from "styled-components";
 import { Github } from "@styled-icons/fa-brands/Github";
 import { ExternalLink } from "@styled-icons/evil/ExternalLink";
+import Flip from "react-reveal/Flip";
 
-const rotateX = keyframes`
-0% {
-    transform: perspective(400px) rotate3d(0, -1, 0, 90deg);
-    animation-timing-function: ease-in;
-    opacity: 0;
-}
-40% {
-    transform: perspective(400px) rotate3d(0, -1, 0, -20deg);
-    animation-timing-function: ease-in;
-}
-60% {
-    transform: perspective(400px) rotate3d(0, -1, 0, 10deg);
-    opacity: 1;
-}
-80% {
-    transform: perspective(400px) rotate3d(0, -1, 0, -5deg);
-}
-100% {
-    transform: perspective(400px);`;
-
-    
-
-const ProjectContainer = styled.div`
+const AnimationContainer = styled.div`
   width: 25%;
   min-height: 550px;
   min-width: 500px;
   margin: 40px;
+`;
+const ProjectContainer = styled.div`
   background-color: rgba(0, 0, 0, 0.9);
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 10px 10px 49px -6px rgba(0, 0, 0, 0.75);
-  animation: ${rotateX} 1s;
 
   @media (max-width: 1024px) {
     width: 60%;
@@ -126,23 +106,27 @@ const Link = styled.a`
 
 const Project = ({ title, src, description, github, demo }) => {
   return (
-    <ProjectContainer>
-      <Image src={src} />
-      <DescriptionContainer>
-        <ProjectTitle>{title}</ProjectTitle>
-        <ProjectDescription>{description}</ProjectDescription>
-        <LinkContainer>
-          <Link href={github} target="_blank">
-            <StyledGithub />
-            <LinkText>Github</LinkText>
-          </Link>
-          <Link href={demo} target="_blank">
-            <StyledExternalLink />
-            <LinkText>Demo</LinkText>
-          </Link>
-        </LinkContainer>
-      </DescriptionContainer>
-    </ProjectContainer>
+    <AnimationContainer>
+      <Flip right>
+        <ProjectContainer>
+          <Image src={src} />
+          <DescriptionContainer>
+            <ProjectTitle>{title}</ProjectTitle>
+            <ProjectDescription>{description}</ProjectDescription>
+            <LinkContainer>
+              <Link href={github} target="_blank">
+                <StyledGithub />
+                <LinkText>Github</LinkText>
+              </Link>
+              <Link href={demo} target="_blank">
+                <StyledExternalLink />
+                <LinkText>Demo</LinkText>
+              </Link>
+            </LinkContainer>
+          </DescriptionContainer>
+        </ProjectContainer>
+      </Flip>
+    </AnimationContainer>
   );
 };
 

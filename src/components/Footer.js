@@ -71,7 +71,7 @@ const StyledMail = styled(Mail)`
 
 const Footer = ({ element }) => {
   return (
-    <StyledFooter id="contact" ref={element}>
+    <StyledFooter name="contact" ref={element}>
       <List>
         <ListItem>
           <Link
