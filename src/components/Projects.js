@@ -5,7 +5,7 @@ import sipe from "../imgs/projects/SIPE.png";
 import wayne from "../imgs/projects/Wayne.png";
 import movie from "../imgs/projects/Movies.png";
 import Project from "./Project";
-import { Events, scrollSpy } from "react-scroll";
+
 
 const Section = styled.section`
   display: flex;
