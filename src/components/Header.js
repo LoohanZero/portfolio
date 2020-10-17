@@ -17,11 +17,6 @@ const BackgroundImage = styled.div`
   min-height: 100vh;
   position: absolute;
   background-attachment: fixed;
-
-  @media (max-width: 1024px) {
-    min-height: 90vh;
-    height: 90vh;
-  }
 `;
 const StyledHeader = styled.header`
   display: flex;
@@ -32,21 +27,23 @@ const StyledHeader = styled.header`
   min-height: 100vh;
   height: 100%;
   z-index: 10;
-
-  @media (max-width: 1024px) {
-    min-height: 90vh;
-  }
 `;
 
 const TitleContainer = styled.div`
+  margin-top: 80px;
   text-align: left;
-  width: 50%;
+  width: 55%;
+  min-width: 660px;
 `;
 
 const Title = styled.h1`
   font-family: "Open Sans", sans-serif;
   font-size: 60px;
   letter-spacing: 5px;
+
+  @media (max-width: 900px) {
+    text-align: center;
+  }
 `;
 const Subtitle = styled.h2`
   font-family: "Open Sans", sans-serif;
@@ -54,6 +51,10 @@ const Subtitle = styled.h2`
   font-size: 30px;
   padding-left: 2px;
   padding: 20px 0;
+
+  @media (max-width: 900px) {
+    text-align: center;
+  }
 `;
 const Span = styled.span`
   color: #1dc2a7;
@@ -63,8 +64,13 @@ const Span = styled.span`
 const ContactContainer = styled.div`
   display: flex;
   align-items: center;
-  width: 50%;
+  width: 55%;
+  min-width: 660px;
   padding: 70px;
+
+  @media (max-width: 900px) {
+    justify-content: center;
+  }
 `;
 
 const Text = styled.p`
@@ -126,7 +132,6 @@ const Logo = styled.img`
 `;
 
 const InfoContainer = styled.div`
-  width: 1200px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -146,8 +151,8 @@ const Header = ({ element, scroll }) => {
     <>
       <BackgroundImage />
       <StyledHeader ref={element} name="home" scroll={scroll}>
-        <Fade bottom>
-          <InfoContainer>
+        <InfoContainer>
+          <Fade bottom>
             <TitleContainer>
               <Title>Hi there, </Title>
               <Title>
@@ -164,8 +169,8 @@ const Header = ({ element, scroll }) => {
               <Logo src={js} />
               <Logo src={html} />
             </ContactContainer>
-          </InfoContainer>
-        </Fade>
+          </Fade>
+        </InfoContainer>
       </StyledHeader>
     </>
   );

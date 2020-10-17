@@ -9,6 +9,11 @@ const AnimationContainer = styled.article`
   min-height: 540px;
   min-width: 500px;
   margin: 40px;
+
+  @media (max-width: 1200px) {
+    width: 60%;
+    height: auto;
+  }
 `;
 const ProjectContainer = styled.div`
   background-color: rgba(0, 0, 0, 0.9);
@@ -21,9 +26,8 @@ const ProjectContainer = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 1024px) {
-    width: 60%;
-    height: auto;
+  @media (max-width: 1200px) {
+    min-height: 400px;
   }
 `;
 
@@ -32,6 +36,10 @@ const Image = styled.img`
   min-height: 230px;
   margin: 30px 0 25px 0;
   border-radius: 20px;
+
+  @media (max-width: 1200px) {
+    margin-top: 45px;
+  }
 `;
 const DescriptionContainer = styled.div`
   height: 250px;
@@ -43,7 +51,7 @@ const DescriptionContainer = styled.div`
   align-items: center;
   position: relative;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1200px) {
     height: auto;
   }
 `;
@@ -51,10 +59,14 @@ const ProjectTitle = styled.h3`
   font-size: 25px;
   padding-top: 20px;
   text-align: center;
+
+  @media (max-width: 1200px) {
+    padding: 30px 0;
+  }
 `;
 
 const ProjectDescription = styled.p`
-  font-size: 14px;
+  font-size: 15px;
   line-height: 25px;
   padding: 5px 15px 30px 15px;
   text-align: justify;
@@ -98,7 +110,7 @@ const Link = styled.a`
   height: 60px;
   width: 60px;
   border-radius: 10px;
-  box-shadow: 8px -5px 20px 0px rgba(0,0,0,0.9);
+  box-shadow: 8px -5px 20px 0px rgba(0, 0, 0, 0.9);
 
   /* &:hover {
     background-color: #6d6d6d;

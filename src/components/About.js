@@ -16,9 +16,6 @@ const Section = styled.section`
   box-shadow: inset 0 0 10px #000000;
   padding-bottom: 30px;
 
-  @media (max-width: 1024px) {
-    min-height: 90vh;
-  }
 `;
 
 const Title = styled.h2`
@@ -26,7 +23,7 @@ const Title = styled.h2`
   font-size: 35px;
   letter-spacing: 3px;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 900px) {
     padding: 100px 0 50px 0;
   }
 `;
@@ -35,8 +32,9 @@ const Text = styled.p`
   padding-bottom: 10px;
   line-height: 23px;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 900px) {
     text-align: center;
+    
   }
 `;
 
@@ -46,8 +44,15 @@ const AboutMeContainer = styled.div`
   align-items: center;
   width: 80%;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1200px) {
+    
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  @media (max-width: 900px) {
     flex-direction: column;
+  
   }
 `;
 
@@ -57,7 +62,7 @@ const Image = styled.img`
   width: 300px;
   border-radius: 10px;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 900px) {
     width: 400px;
     margin-bottom: 50px;
   }
@@ -65,14 +70,18 @@ const Image = styled.img`
 
 const AnimationDescriptionContainer = styled.div`
   width: 50%;
+
+  @media (max-width: 1200px) {
+  width: 70%;
+}
 `;
+
+
 
 const DescriptionContainer = styled.div`
   width: 100%;
 
-  @media (max-width: 1024px) {
-    width: 80%;
-  }
+
 `;
 
 const SkillsContainer = styled.div`
@@ -82,14 +91,16 @@ const SkillsContainer = styled.div`
 const Subtitle = styled.h4`
   font-size: 20px;
   padding-bottom: 15px;
-  @media (max-width: 1024px) {
+
+  @media (max-width: 900px) {
     text-align: center;
   }
 `;
 
 const ListContainer = styled.div`
   display: flex;
-  @media (max-width: 1024px) {
+  
+  @media (max-width: 1200px) {
     justify-content: space-evenly;
   }
 `;
@@ -102,7 +113,7 @@ const List = styled.ul`
   flex-direction: column;
   justify-content: space-evenly;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 900px) {
     width: auto;
   }
 `;
@@ -144,7 +155,7 @@ const About = () => {
               </Text>
             </Slide>
             <SkillsContainer>
-              <Slide right duration={500}>
+              <Slide up duration={500}>
                 <Subtitle>My Skills</Subtitle>
               </Slide>
               <ListContainer>
