@@ -35,11 +35,11 @@ const Image = styled.img`
 `;
 const DescriptionContainer = styled.div`
   height: 250px;
-  padding-top: 10px;
+  padding: 10px 0;
   width: 90%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   position: relative;
 
@@ -49,13 +49,14 @@ const DescriptionContainer = styled.div`
 `;
 const ProjectTitle = styled.h3`
   font-size: 25px;
+  padding-top: 20px;
   text-align: center;
 `;
 
 const ProjectDescription = styled.p`
   font-size: 14px;
   line-height: 25px;
-  padding: 5px 15px 15px 15px;
+  padding: 5px 15px 30px 15px;
   text-align: justify;
   height: 150px;
 
