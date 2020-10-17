@@ -16,6 +16,7 @@ const Section = styled.section`
   height: 100%;
   margin-top: 30px;
   margin-bottom: 20px;
+  overflow: hidden;
 `;
 const Title = styled.h2`
   margin: 100px 0 20px 0;

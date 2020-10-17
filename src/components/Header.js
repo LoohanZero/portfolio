@@ -27,6 +27,7 @@ const StyledHeader = styled.header`
   min-height: 100vh;
   height: 100%;
   z-index: 10;
+  overflow: hidden;
 `;
 
 const TitleContainer = styled.div`

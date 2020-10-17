@@ -15,7 +15,7 @@ const Section = styled.section`
   color: #212121;
   box-shadow: inset 0 0 10px #000000;
   padding-bottom: 30px;
-
+  overflow: hidden;
 `;
 
 const Title = styled.h2`
@@ -34,7 +34,6 @@ const Text = styled.p`
 
   @media (max-width: 900px) {
     text-align: center;
-    
   }
 `;
 
@@ -45,14 +44,12 @@ const AboutMeContainer = styled.div`
   width: 80%;
 
   @media (max-width: 1200px) {
-    
     width: 100%;
     justify-content: space-evenly;
   }
 
   @media (max-width: 900px) {
     flex-direction: column;
-  
   }
 `;
 
@@ -72,16 +69,12 @@ const AnimationDescriptionContainer = styled.div`
   width: 50%;
 
   @media (max-width: 1200px) {
-  width: 70%;
-}
+    width: 70%;
+  }
 `;
-
-
 
 const DescriptionContainer = styled.div`
   width: 100%;
-
-
 `;
 
 const SkillsContainer = styled.div`
@@ -99,7 +92,7 @@ const Subtitle = styled.h4`
 
 const ListContainer = styled.div`
   display: flex;
-  
+
   @media (max-width: 1200px) {
     justify-content: space-evenly;
   }
