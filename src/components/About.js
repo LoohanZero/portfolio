@@ -42,7 +42,7 @@ const Text = styled.p`
 
 const AboutMeContainer = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   width: 80%;
 
@@ -120,13 +120,13 @@ const About = () => {
 
       <AboutMeContainer>
         <ImageContainer>
-          <Slide left>
+          <Slide left duration={500}>
             <Image src={photo} alt="It's a picture of me" />
           </Slide>
         </ImageContainer>
         <AnimationDescriptionContainer>
-          <Slide right>
-            <DescriptionContainer>
+          <DescriptionContainer>
+            <Slide right duration={500}>
               <Text>
                 I'm a 33 year old frontend developer. I'm currently located in
                 Menorca, Spain but I'm willing to relocate wherever my job
@@ -142,47 +142,59 @@ const About = () => {
                 restless and passionate worker and I believe I can bring a lot
                 to the table.
               </Text>
-              <SkillsContainer>
+            </Slide>
+            <SkillsContainer>
+              <Slide right duration={500}>
                 <Subtitle>My Skills</Subtitle>
-                <ListContainer>
-                  <List>
+              </Slide>
+              <ListContainer>
+                <List>
+                  <Slide up big delay={500} duration={200}>
                     <ListItem>
                       <Span>○</Span>React.JS with Hooks
                     </ListItem>
+                  </Slide>
+                  <Slide up big delay={600} duration={200}>
                     <ListItem>
                       <Span>○</Span>Javascript ES6
                     </ListItem>
+                  </Slide>
+                  <Slide up big delay={700} duration={200}>
                     <ListItem>
                       <Span>○</Span>Sass
                     </ListItem>
+                  </Slide>
+                  <Slide up big delay={800} duration={200}>
                     <ListItem>
                       <Span>○</Span>HTML5 & CSS3
                     </ListItem>
+                  </Slide>
+                </List>
+                <List>
+                  <Slide up big delay={900} duration={200}>
                     <ListItem>
                       <Span>○</Span>Bootstrap
                     </ListItem>
-                  </List>
-                  <List>
+                  </Slide>
+                  <Slide up big delay={1000} duration={200}>
                     <ListItem>
                       <Span>○</Span>Git
                     </ListItem>
+                  </Slide>
+                  <Slide up big delay={1100} duration={200}>
                     <ListItem>
                       <Span>○</Span>Firebase
                     </ListItem>
+                  </Slide>
+                  <Slide up big delay={1200} duration={200}>
                     <ListItem>
                       <Span>○</Span>Responsive Design
                     </ListItem>
-                    <ListItem>
-                      <Span>○</Span>Node.JS
-                    </ListItem>
-                    <ListItem>
-                      <Span>○</Span>MongoDB
-                    </ListItem>
-                  </List>
-                </ListContainer>
-              </SkillsContainer>
-            </DescriptionContainer>
-          </Slide>
+                  </Slide>
+                </List>
+              </ListContainer>
+            </SkillsContainer>
+          </DescriptionContainer>
         </AnimationDescriptionContainer>
       </AboutMeContainer>
     </Section>

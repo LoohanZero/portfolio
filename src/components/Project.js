@@ -98,7 +98,7 @@ const Link = styled.a`
   height: 60px;
   width: 60px;
   border-radius: 10px;
-  box-shadow: -10px -10px 49px -6px rgba(0, 0, 0, 0.9);
+  box-shadow: 8px -5px 20px 0px rgba(0,0,0,0.9);
 
   /* &:hover {
     background-color: #6d6d6d;

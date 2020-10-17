@@ -6,7 +6,6 @@ import wayne from "../imgs/projects/Wayne.png";
 import movie from "../imgs/projects/Movies.png";
 import Project from "./Project";
 
-
 const Section = styled.section`
   display: flex;
   flex-direction: column;
@@ -33,8 +32,6 @@ const ProjectsContainer = styled.div`
 `;
 
 const Projects = () => {
-
-  
   return (
     <Section name="projects">
       <Title>My Projects</Title>
@@ -55,8 +52,8 @@ const Projects = () => {
           title="SIPE Carnicerías SRL"
           src={sipe}
           description="Project built from scratch for my former employer as requested.
-          Website design, development and architecture. Social media
-          management. Billing, administration. Wages, suppliers and cash
+          Website design, development and architecture done by me and a colleague. 
+          I was also in charge of social media, billing, administration, wages, suppliers and cash
           office management."
           github="https://github.com/LoohanZero/SIPECarnicerias"
           demo="https://www.sipecarnicerias.com/"
@@ -65,7 +62,8 @@ const Projects = () => {
           title="The Marvel App"
           src={marvel}
           description=" Created this project from the ground up using the Marvel API,
-          React Js. and Javascript."
+          React Js. and Javascript.
+          This was a solo project built using the react-router-dom and styled-components packages."
           github="https://github.com/LoohanZero/Marvel-App"
           demo="https://lujanmarvelapp.netlify.app/"
         />
