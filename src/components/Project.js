@@ -12,9 +12,13 @@ const AnimationContainer = styled.div`
 `;
 const ProjectContainer = styled.div`
   background-color: rgba(0, 0, 0, 0.9);
-  border-radius: 10px;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 10px 10px 49px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 25px -3px rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   @media (max-width: 1024px) {
     width: 60%;
@@ -23,14 +27,19 @@ const ProjectContainer = styled.div`
 `;
 
 const Image = styled.img`
-  width: 100%;
-  height: 245px;
+  width: 85%;
+  min-height: 245px;
+  margin: 30px 0 25px 0;
+  border-radius: 20px;
 `;
 const DescriptionContainer = styled.div`
-  height: 305px;
+  height: 280px;
+  padding-top: 15px;
+  width: 90%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  position: relative;
 
   @media (max-width: 1024px) {
     height: auto;
@@ -38,7 +47,6 @@ const DescriptionContainer = styled.div`
 `;
 const ProjectTitle = styled.h3`
   font-size: 25px;
-  padding: 25px 15px;
   text-align: center;
 `;
 
@@ -79,22 +87,34 @@ const LinkText = styled.p`
 const Link = styled.a`
   cursor: pointer;
   display: flex;
+  justify-content: center;
   align-items: center;
   text-decoration: none;
   color: inherit;
+  position: absolute;
+  background-color: #0C545F;
+  height: 60px;
+  width: 120px;
+  border-radius: 20px;
+  top: -50px;
 
-  &:hover ${StyledGithub} {
-    color: #32e0c4;
+  &:hover {
+    background-color: #32e0c4;
     transition: 0.3s ease-in;
   }
 
   &:hover ${StyledExternalLink} {
-    color: #32e0c4;
+    color: #212121;
+    transition: 0.3s ease-in;
+  }
+
+  &:hover ${StyledGithub} {
+    color: #212121;
     transition: 0.3s ease-in;
   }
 
   &:hover ${LinkText} {
-    color: #32e0c4;
+    color: #212121;
     transition: 0.3s ease-in;
   }
 
@@ -102,6 +122,13 @@ const Link = styled.a`
     color: #eeeeee;
     transition: 0.3s ease-in;
   }
+`;
+
+const LeftLink = styled(Link)`
+  left: 80px;
+`;
+const RightLink = styled(Link)`
+  right: 80px;
 `;
 
 const Project = ({ title, src, description, github, demo }) => {
@@ -114,14 +141,14 @@ const Project = ({ title, src, description, github, demo }) => {
             <ProjectTitle>{title}</ProjectTitle>
             <ProjectDescription>{description}</ProjectDescription>
             <LinkContainer>
-              <Link href={github} target="_blank">
+              <LeftLink href={github} target="_blank">
                 <StyledGithub />
                 <LinkText>Github</LinkText>
-              </Link>
-              <Link href={demo} target="_blank">
+              </LeftLink>
+              <RightLink href={demo} target="_blank">
                 <StyledExternalLink />
                 <LinkText>Demo</LinkText>
-              </Link>
+              </RightLink>
             </LinkContainer>
           </DescriptionContainer>
         </ProjectContainer>

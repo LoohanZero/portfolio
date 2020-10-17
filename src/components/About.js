@@ -51,9 +51,7 @@ const AboutMeContainer = styled.div`
   }
 `;
 
-const ImageContainer = styled.div`
-  
-`;
+const ImageContainer = styled.div``;
 
 const Image = styled.img`
   width: 300px;
