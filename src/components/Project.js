@@ -4,7 +4,7 @@ import { Github } from "@styled-icons/fa-brands/Github";
 import { ExternalLink } from "@styled-icons/evil/ExternalLink";
 import Flip from "react-reveal/Flip";
 
-const AnimationContainer = styled.div`
+const AnimationContainer = styled.article`
   width: 25%;
   min-height: 540px;
   min-width: 500px;
@@ -99,21 +99,20 @@ const Link = styled.a`
   border-radius: 10px;
   box-shadow: -10px -10px 49px -6px rgba(0, 0, 0, 0.9);
 
-  &:hover {
+  /* &:hover {
     background-color: #6d6d6d;
     transition: 0.3s ease-in;
-  }
+  } */
 
   &:hover ${StyledExternalLink} {
-    color: #212121;
+    color: #32e0c4;
     transition: 0.3s ease-in;
   }
 
   &:hover ${StyledGithub} {
-    color: #212121;
+    color: #32e0c4;
     transition: 0.3s ease-in;
   }
-
 
   &:visited {
     color: #eeeeee;
