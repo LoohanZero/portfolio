@@ -18,8 +18,9 @@ const BackgroundImage = styled.div`
   position: absolute;
   background-attachment: fixed;
 
-  @media (max-width: 500px) {
-    background-size: contain;
+  @media(max-width: 500px) {
+    background-size: cover;
+    background-position: 50% 50%;
   }
 `;
 const StyledHeader = styled.header`
@@ -99,8 +100,10 @@ const ContactContainer = styled.div`
 
   @media (max-width: 450px) {
     flex-direction: column;
-    padding: 30px;
+    padding: 30px; 
   }
+
+  
 `;
 
 const Text = styled.p`
