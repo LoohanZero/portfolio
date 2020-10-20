@@ -55,7 +55,8 @@ const Image = styled.img`
 
   @media (max-width: 420px) {
     min-height: 138px;
-    border-radius: 0px;
+    width: 70%;
+    
   }
 
   @media (max-width: 330px) {
