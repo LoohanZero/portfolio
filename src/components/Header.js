@@ -17,6 +17,10 @@ const BackgroundImage = styled.div`
   min-height: 100vh;
   position: absolute;
   background-attachment: fixed;
+
+  @media (max-width: 500px) {
+    background-size: contain;
+  }
 `;
 const StyledHeader = styled.header`
   display: flex;
@@ -95,10 +99,8 @@ const ContactContainer = styled.div`
 
   @media (max-width: 450px) {
     flex-direction: column;
-    padding: 30px; 
+    padding: 30px;
   }
-
-  
 `;
 
 const Text = styled.p`
