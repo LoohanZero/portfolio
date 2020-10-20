@@ -69,11 +69,13 @@ const Image = styled.img`
 
   @media (max-width: 1024px) {
     width: 400px;
+    max-height: 500px; 
     margin-bottom: 50px;
   }
 
   @media (max-width: 500px) {
-    width: 200px;
+    width: 300px;
+    max-height: 400px;
   }
 `;
 
