@@ -28,7 +28,7 @@ const Title = styled.h2`
   }
 
   @media (max-width: 450px) {
-    font-size: 25px; 
+    font-size: 25px;
   }
 `;
 
@@ -65,6 +65,7 @@ const ImageContainer = styled.div`
 const Image = styled.img`
   width: 300px;
   border-radius: 10px;
+  max-height: 400px;
 
   @media (max-width: 1024px) {
     width: 400px;
