@@ -20,7 +20,7 @@ const BackgroundImage = styled.div`
 
   @media(max-width: 500px) {
     background-size: cover;
-    background-position: 50% 50%;
+    background-position: 58% 50%;
   }
 `;
 const StyledHeader = styled.header`
