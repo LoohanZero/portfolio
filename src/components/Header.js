@@ -17,11 +17,11 @@ const BackgroundImage = styled.div`
   min-height: 100vh;
   position: absolute;
   background-attachment: fixed;
-
+/* 
   @media(max-width: 500px) {
-    background-size: cover;
+   
     background-position: 58% 50%;
-  }
+  } */
 `;
 const StyledHeader = styled.header`
   display: flex;
