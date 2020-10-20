@@ -72,7 +72,7 @@ const Image = styled.img`
   }
 
   @media (max-width: 500px) {
-    width: 50%;
+    width: 200px;
   }
 `;
 
