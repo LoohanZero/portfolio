@@ -23,8 +23,12 @@ const Title = styled.h2`
   font-size: 35px;
   letter-spacing: 3px;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1024px) {
     padding: 100px 0 50px 0;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 25px; 
   }
 `;
 
@@ -32,8 +36,8 @@ const Text = styled.p`
   padding-bottom: 10px;
   line-height: 23px;
 
-  @media (max-width: 900px) {
-    text-align: center;
+  @media (max-width: 1024px) {
+    text-align: justify;
   }
 `;
 
@@ -48,20 +52,27 @@ const AboutMeContainer = styled.div`
     justify-content: space-evenly;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 1024px) {
     flex-direction: column;
   }
 `;
 
-const ImageContainer = styled.div``;
+const ImageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
 
 const Image = styled.img`
   width: 300px;
   border-radius: 10px;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1024px) {
     width: 400px;
     margin-bottom: 50px;
+  }
+
+  @media (max-width: 500px) {
+    width: 50%;
   }
 `;
 
@@ -71,10 +82,22 @@ const AnimationDescriptionContainer = styled.div`
   @media (max-width: 1200px) {
     width: 70%;
   }
+  @media (max-width: 505px) {
+    width: 90%;
+  }
+
+  @media (max-width: 450px) {
+    width: 100%;
+  }
 `;
 
 const DescriptionContainer = styled.div`
   width: 100%;
+
+  @media (max-width: 450px) {
+    margin: auto;
+    width: 76%;
+  }
 `;
 
 const SkillsContainer = styled.div`
@@ -85,7 +108,7 @@ const Subtitle = styled.h4`
   font-size: 20px;
   padding-bottom: 15px;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1024px) {
     text-align: center;
   }
 `;
@@ -95,6 +118,11 @@ const ListContainer = styled.div`
 
   @media (max-width: 1200px) {
     justify-content: space-evenly;
+  }
+
+  @media (max-width: 400px) {
+    flex-direction: column;
+    align-items: center;
   }
 `;
 
@@ -106,8 +134,12 @@ const List = styled.ul`
   flex-direction: column;
   justify-content: space-evenly;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1024px) {
     width: auto;
+  }
+  @media (max-width: 400px) {
+    height: auto;
+    width: 160px;
   }
 `;
 
@@ -115,7 +147,11 @@ const Span = styled.span`
   color: #0d7377;
   padding-right: 10px;
 `;
-const ListItem = styled.li``;
+const ListItem = styled.li`
+  @media (max-width: 400px) {
+    padding: 10px 0;
+  }
+`;
 
 const About = () => {
   return (
@@ -123,11 +159,12 @@ const About = () => {
       <Title>About Me</Title>
 
       <AboutMeContainer>
-        <ImageContainer>
-          <Slide left duration={500}>
+        <Slide left duration={500}>
+          <ImageContainer>
             <Image src={photo} alt="It's a picture of me" />
-          </Slide>
-        </ImageContainer>
+          </ImageContainer>
+        </Slide>
+
         <AnimationDescriptionContainer>
           <DescriptionContainer>
             <Slide right duration={500}>
@@ -155,7 +192,7 @@ const About = () => {
                 <List>
                   <Slide up big delay={500} duration={200}>
                     <ListItem>
-                      <Span>○</Span>React.JS with Hooks
+                      <Span>○</Span>React.JS Hooks
                     </ListItem>
                   </Slide>
                   <Slide up big delay={600} duration={200}>

@@ -14,6 +14,14 @@ const AnimationContainer = styled.article`
     width: 60%;
     height: auto;
   }
+
+  @media (max-width: 660px) {
+    width: 80%;
+  }
+
+  @media (max-width: 450px) {
+    margin: 10px;
+  }
 `;
 const ProjectContainer = styled.div`
   background-color: rgba(0, 0, 0, 0.9);
@@ -29,6 +37,10 @@ const ProjectContainer = styled.div`
   @media (max-width: 1200px) {
     min-height: 400px;
   }
+
+  @media (max-width: 505px) {
+    border-radius: 0px;
+  }
 `;
 
 const Image = styled.img`
@@ -39,6 +51,16 @@ const Image = styled.img`
 
   @media (max-width: 1200px) {
     margin-top: 45px;
+  }
+
+  @media (max-width: 420px) {
+    min-height: 138px;
+    border-radius: 0px;
+  }
+
+  @media (max-width: 330px) {
+    height: 138px;
+    width: 65%;
   }
 `;
 const DescriptionContainer = styled.div`
@@ -54,6 +76,14 @@ const DescriptionContainer = styled.div`
   @media (max-width: 1200px) {
     height: auto;
   }
+
+  @media (max-width: 450px) {
+    width: 70%;
+  }
+
+  @media (max-width: 330px) {
+    width: 50%;
+  }
 `;
 const ProjectTitle = styled.h3`
   font-size: 25px;
@@ -62,6 +92,11 @@ const ProjectTitle = styled.h3`
 
   @media (max-width: 1200px) {
     padding: 30px 0;
+  }
+
+  @media (max-width: 660px) {
+    padding: 10px 0 15px 0;
+    font-size: 20px;
   }
 `;
 
@@ -75,7 +110,11 @@ const ProjectDescription = styled.p`
   @media (max-width: 1024px) {
     height: auto;
     padding-bottom: 20px;
-    text-align: center;
+    text-align: justify;
+  }
+
+  @media (max-width: 660px) {
+    font-size: 14px;
   }
 `;
 
@@ -87,16 +126,30 @@ const LinkContainer = styled.div`
   position: absolute;
   top: -50px;
   left: 15px;
+
+  @media (max-width: 330px) {
+    left: 0px;
+    justify-content: space-around;
+    width: 70%;
+  }
 `;
 
 const StyledGithub = styled(Github)`
   height: 30px;
   transition: 0.3s ease-in;
+
+  @media (max-width: 660px) {
+    height: 25px;
+  }
 `;
 
 const StyledExternalLink = styled(ExternalLink)`
   height: 45px;
   transition: 0.3s ease-in;
+
+  @media (max-width: 660px) {
+    height: 35px;
+  }
 `;
 
 const Link = styled.a`
@@ -112,10 +165,10 @@ const Link = styled.a`
   border-radius: 10px;
   box-shadow: 8px -5px 20px 0px rgba(0, 0, 0, 0.9);
 
-  /* &:hover {
-    background-color: #6d6d6d;
-    transition: 0.3s ease-in;
-  } */
+  @media (max-width: 660px) {
+    height: 50px;
+    width: 50px;
+  }
 
   &:hover ${StyledExternalLink} {
     color: #32e0c4;

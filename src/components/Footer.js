@@ -16,8 +16,16 @@ const StyledFooter = styled.footer`
 `;
 
 const List = styled.ul`
+  width: 100%;
   list-style: none;
   display: flex;
+  justify-content: space-evenly;
+
+  @media (max-width: 505px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const Link = styled.a`
@@ -25,7 +33,7 @@ const Link = styled.a`
   align-items: center;
   text-decoration: none;
   cursor: pointer;
-  color: inherit; 
+  color: inherit;
 
   &:visited {
     color: #eeeeee;
@@ -33,16 +41,21 @@ const Link = styled.a`
 `;
 
 const Text = styled.p`
-  padding: 30px;
+  padding: 0 15px;
   transition: 0.3s ease-in;
- 
+  @media (max-width: 660px) {
+    padding: 20px;
+  }
 `;
 
 const ListItem = styled.li`
-  padding: 30px;
   transition: 0.3s ease-in;
-  display: flex; 
-  align-items: center; 
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 505px) {
+    box-sizing: content-box;
+  }
 
   &:hover ${Link} {
     color: #32e0c4;
@@ -57,16 +70,14 @@ const ListItem = styled.li`
 
 const StyledLinkedin = styled(LinkedinIn)`
   height: 25px;
-  padding: 0 15px;
 `;
 
 const StyledGithub = styled(Github)`
   height: 25px;
-  padding: 0 15px;
 `;
 const StyledMail = styled(Mail)`
   height: 25px;
-  padding: 0 15px;
+  padding-right: 10px;
 `;
 
 const Footer = ({ element }) => {
@@ -78,12 +89,14 @@ const Footer = ({ element }) => {
             href="https://www.linkedin.com/in/lujansanchez/"
             target="_blank"
           >
-            <StyledLinkedin /> LinkedIn
+            <StyledLinkedin />
+            <Text>LinkedIn</Text>
           </Link>
         </ListItem>
         <ListItem>
           <Link href="https://github.com/LoohanZero" target="_blank">
-            <StyledGithub /> Github
+            <StyledGithub />
+            <Text>Github</Text>
           </Link>
         </ListItem>
         <ListItem>

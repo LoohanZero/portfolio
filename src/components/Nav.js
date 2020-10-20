@@ -53,6 +53,14 @@ const List = styled.ul`
   align-items: center;
   list-style: none;
   width: 45%;
+
+  @media (max-width: 600px) {
+    width: 70%;
+  }
+
+  @media (max-width: 505px) {
+    width: 100%;
+  }
 `;
 
 const ListItem = styled.li`

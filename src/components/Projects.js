@@ -20,9 +20,12 @@ const Section = styled.section`
 `;
 const Title = styled.h2`
   margin: 100px 0 20px 0;
-
   font-size: 35px;
   letter-spacing: 3px;
+
+  @media (max-width: 450px) {
+    font-size: 25px; 
+  }
 `;
 
 const ProjectsContainer = styled.div`
