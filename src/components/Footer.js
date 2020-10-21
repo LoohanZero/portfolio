@@ -21,7 +21,7 @@ const List = styled.ul`
   display: flex;
   justify-content: space-evenly;
 
-  @media (max-width: 505px) {
+  @media (max-width: 670px) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -43,7 +43,7 @@ const Link = styled.a`
 const Text = styled.p`
   padding: 0 15px;
   transition: 0.3s ease-in;
-  @media (max-width: 660px) {
+  @media (max-width: 670px) {
     padding: 20px;
   }
 `;
@@ -52,8 +52,10 @@ const ListItem = styled.li`
   transition: 0.3s ease-in;
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 250px;
 
-  @media (max-width: 505px) {
+  @media (max-width: 670px) {
     box-sizing: content-box;
   }
 

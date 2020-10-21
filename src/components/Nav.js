@@ -54,7 +54,7 @@ const List = styled.ul`
   list-style: none;
   width: 45%;
 
-  @media (max-width: 600px) {
+  @media (max-width: 900px) {
     width: 70%;
   }
 

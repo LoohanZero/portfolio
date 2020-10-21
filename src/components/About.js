@@ -35,6 +35,7 @@ const Title = styled.h2`
 const Text = styled.p`
   padding-bottom: 10px;
   line-height: 23px;
+  text-align: justify;
 
   @media (max-width: 1024px) {
     text-align: justify;
@@ -45,7 +46,7 @@ const AboutMeContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 80%;
+  width: 70%;
 
   @media (max-width: 1200px) {
     width: 100%;
@@ -58,6 +59,7 @@ const AboutMeContainer = styled.div`
 `;
 
 const ImageContainer = styled.div`
+  width: 50%;
   display: flex;
   justify-content: center;
 `;
@@ -69,7 +71,7 @@ const Image = styled.img`
 
   @media (max-width: 1024px) {
     width: 400px;
-    max-height: 500px; 
+    max-height: 500px;
     margin-bottom: 50px;
   }
 
@@ -162,12 +164,11 @@ const About = () => {
       <Title>About Me</Title>
 
       <AboutMeContainer>
-        <Slide left duration={500}>
-          <ImageContainer>
+        <ImageContainer>
+          <Slide left duration={500}>
             <Image src={photo} alt="It's a picture of me" />
-          </ImageContainer>
-        </Slide>
-
+          </Slide>
+        </ImageContainer>
         <AnimationDescriptionContainer>
           <DescriptionContainer>
             <Slide right duration={500}>
