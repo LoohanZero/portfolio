@@ -207,7 +207,7 @@ const Header = ({ element, scroll }) => {
                 I'm
                 <Span>Luján Sanchez</Span>
               </Title>
-              <Subtitle>Frontend & React.Js Developer</Subtitle>
+              <Subtitle>Frontend & ReactJS Developer</Subtitle>
             </TitleContainer>
             <ContactContainer>
               <Button onClick={() => handleContactClick(scroll)}>

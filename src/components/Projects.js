@@ -4,6 +4,8 @@ import marvel from "../imgs/projects/MarvelApp.png";
 import sipe from "../imgs/projects/SIPE.png";
 import wayne from "../imgs/projects/Wayne.png";
 import movie from "../imgs/projects/Movies.png";
+import oompas from "../imgs/projects/Oompas.png";
+import cadt from "../imgs/projects/cadt.png";
 import Project from "./Project";
 
 const Section = styled.section`
@@ -40,10 +42,28 @@ const Projects = () => {
     <Section name="projects">
       <Title>My Projects</Title>
       <ProjectsContainer>
+      <Project
+          title="The CADT Table"
+          src={cadt}
+          description="App built using ReactJs with hooks, Javascript and Sass. Used linters for JSX and CSS.
+          Backend is locally deployed with the json-server package. 
+          The design is responsive. 
+          It was a challenge I made to start learning and applying Jest and React Testing Library. 
+          It's still a work in process."
+          github="https://github.com/LoohanZero/cadt-test"
+        />
+      <Project
+          title="The Oompa Selector"
+          src={oompas}
+          description="App built using ReactJS with hooks, Javascript and CSS. The design is responsive and I
+          made the deployment trough the Git terminal to Netlify. It was a challenge I made to get in to my current job post, in Napptilus."
+          github="https://github.com/LoohanZero/napptilus-demo"
+          demo="https://theoompaselector.netlify.app/"
+        />
         <Project
           title="The Ada Movie"
           src={movie}
-          description="App based in The Movie Database. It was built using React.js with hooks, Javascript, Sass and Firebase. The design is responsive and we
+          description="App based in The Movie Database. It was built using ReactJS with hooks, Javascript, Sass and Firebase. The design is responsive and we
           made the deployment trough the Git terminal to Netlify. It was an
           amazing challenge requested by ADA ITW, our bootcamp, that me and my
           classmates built from scratch using Github as our project organizer.

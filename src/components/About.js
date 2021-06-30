@@ -155,6 +155,7 @@ const Span = styled.span`
 const ListItem = styled.li`
   @media (max-width: 400px) {
     padding: 10px 0;
+    min-width: 180px;
   }
 `;
 

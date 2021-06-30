@@ -48,6 +48,7 @@ const Image = styled.img`
   min-height: 230px;
   margin: 30px 0 25px 0;
   border-radius: 20px;
+  object-fit: cover;
 
   @media (max-width: 1200px) {
     margin-top: 45px;
@@ -200,9 +201,9 @@ const Project = ({ title, src, description, github, demo }) => {
               <Link href={github} target="_blank">
                 <StyledGithub />
               </Link>
-              <Link href={demo} target="_blank">
+              {demo && <Link href={demo} target="_blank">
                 <StyledExternalLink />
-              </Link>
+              </Link>}
             </LinkContainer>
           </DescriptionContainer>
         </ProjectContainer>
