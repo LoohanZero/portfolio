@@ -173,9 +173,8 @@ const About = () => {
           <DescriptionContainer>
             <Slide right duration={500}>
               <Text>
-                I'm a 33 year old frontend developer. I'm currently located in
-                Menorca, Spain but I'm willing to relocate wherever my job
-                requires. I'm curious by nature and I enjoy finding out the whys
+                I'm a 34 year old junior frontend developer. I'm currently located in
+                Barcelona, Spain but I'm willing to work remotely. I'm curious by nature and I enjoy finding out the whys
                 and hows of everything. I like studying and constantly learning
                 new things, it keeps my mind awake. I love challenges and
                 working with people, there's nothing like the satisfaction of a
@@ -196,7 +195,17 @@ const About = () => {
                 <List>
                   <Slide up big delay={500} duration={200}>
                     <ListItem>
-                      <Span>○</Span>React.JS Hooks
+                      <Span>○</Span>ReactJS Hooks
+                    </ListItem>
+                  </Slide>
+                  <Slide up big delay={500} duration={200}>
+                    <ListItem>
+                      <Span>○</Span>NodeJS
+                    </ListItem>
+                  </Slide>
+                  <Slide up big delay={800} duration={200}>
+                    <ListItem>
+                      <Span>○</Span>Google Cloud Platform
                     </ListItem>
                   </Slide>
                   <Slide up big delay={600} duration={200}>
@@ -229,6 +238,16 @@ const About = () => {
                   <Slide up big delay={1100} duration={200}>
                     <ListItem>
                       <Span>○</Span>Firebase
+                    </ListItem>
+                  </Slide>
+                  <Slide up big delay={800} duration={200}>
+                    <ListItem>
+                      <Span>○</Span>PHP
+                    </ListItem>
+                  </Slide>
+                  <Slide up big delay={800} duration={200}>
+                    <ListItem>
+                      <Span>○</Span>MySQL
                     </ListItem>
                   </Slide>
                   <Slide up big delay={1200} duration={200}>
